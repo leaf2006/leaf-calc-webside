@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>基础数学计算器</title>
+</head>
+	<body>
+		<!--<body background="background2.jpg"/>-->
+	<br />
+	<br />
+	<div class="主体" style="text-align:center;">
+		<font size="6"><b>基础数学计算器</b></font>
+	</div>
+	<br />
+	<br />
+		<div class="主体" style="text-align:center;"> 
+	      <input type="button" value="加法" id="jiafa" style="width: 120px;height: 50px;"/>
+	   <input type="button" value="减法" style="width: 120px;height: 50px;" id="jianfa" />
+	   <input type="button" value="乘法" style="width: 120px;height: 50px;" id="chengfa" />
+	   <input type="button" value="除法" style="width: 120px;height: 50px;"id="chufa" />
+	   <input type="button" value="π" style="width: 120px;height: 50px;"id="pi" />
+	   <input type="button" value="正方形周长" style="width: 120px;height: 50px;"id="zfxzc" />
+	   <input type="button" value="正方形面积" style="width: 120px;height: 50px;"id="zfxmj" />
+	   <input type="button" value="长方形周长" style="width: 120px;height: 50px;"id="cfxzc" />
+	</div>
+	  <br />
+	      <div class="主体" style="text-align:center;">  
+	  <input type="button" value="长方形面积" style="width: 120px;height: 50px;"id="cfxmj" />
+	   <input type="button" value="三角形周长" style="width: 120px;height: 50px;"id="sjxzc"/>
+	   <input type="button" value="三角形面积" style="width: 120px;height: 50px;"id="sjxmj"/>
+	   <input type="button" value="梯形面积" style="width: 120px;height: 50px;"id="txmj"/>
+	   <input type="button" value="圆周长" style="width: 120px;height: 50px;"id="yzc"/>
+	   <input type="button" value="圆面积" style="width: 120px;height: 50px"id="ymj"/>
+	   <input type="button" value="立方体表面积" style="width: 120px;height: 50px;"id="lftbmj"/>
+	   <input type="button" value="立方体体积" style="width: 120px;height: 50px;"id="lfttj"/><br />
+	  <br />
+	       </div>
+	       <div class="主体" style="text-align:center;"> 
+	  <input type="button" value="长方体表面积" style="width: 120px;height: 50px;"id="cftbmj"/>
+	   <input type="button"value="长方体体积" style="width: 120px;height: 50px;"id="cfttj"/>
+	   <input type="button" value="圆柱表面积" style="width: 120px;height: 50px;"id="yzbmj"/>
+	   <input type="button" value="圆柱体积" style="width: 120px;height: 50px;"id="yztj"/>
+	   <input type="button" value="圆锥体积" style="width: 120px;height: 50px;"id="yztj2"/>
+	   <input type="button" value="圆球体积" style="width: 120px;height: 50px;"id="yqtj"/>
+	   <input type="button" value="幂" style="width: 120px;height: 50px;"id="mi"/>
+	   <input type="button" value="开平方根" style="width: 120px;height: 50px;"id="kpfg"/>
+	</div>
+	   <br />
+	  <br />
+	  <div class="主体" style="text-align:center;">
+	    参数1<input type="text" style="width: 200px;height: 20px;"id="num1" /><br /><br />
+	  	参数2<input type="text" style="width: 200px;height: 20px;"id="num2"/><br /><br />
+	  	参数3<input type="text" style="width: 200px;height: 20px;"id="num3"/><br /><br />
+	    输出框<input type="text" style="width: 200px;height: 20px;"id="num4"/>
+
+	  </div>
+	  <script>
+	  	var jiafa = document.getElementById("jiafa");
+	  	var jianfa = document.getElementById("jianfa");
+	  	var chengfa = document.getElementById("chengfa");
+	  	var chufa = document.getElementById ("chufa");
+	  	var pi = document.getElementById ("pi");
+	  	var zfxzc = document.getElementById ("zfxzc");
+	  	var zfxmj = document.getElementById("zfxmj");
+	  	var cfxzc = document.getElementById("cfxzc");
+	  	var cfxmj = document.getElementById("cfxmj");
+	  	var sjxzc = document.getElementById("sjxzc");
+	  	var sjxmj = document.getElementById("sjxmj");
+	  	var txmj = document.getElementById("txmj");
+	  	var yzc = document.getElementById("yzc");
+	  	var ymj = document.getElementById("ymj");
+	  	var lftbmj = document.getElementById("lftbmj");
+	  	var lfttj = document.getElementById("lfttj");
+	  	var cftbmj = document.getElementById ("cftbmj");
+	  	var cfttj = document.getElementById("cfttj");
+	  	var yzbmj = document.getElementById("yzbmj");
+	  	var yztj = document.getElementById ("yztj");
+	  	var yztj2 = document.getElementById ("yztj2");
+	  	var yqtj = document.getElementById("yqtj");
+	  	var mi = document.getElementById("mi");
+	  	var kpfg = document.getElementById("kpfg");
+	  	var num1 = document.getElementById("num1");
+	  	var num2 = document.getElementById("num2");
+	  	var num3 = document.getElementById ("num3");
+	  	var num4 = document.getElementById("num4");
+	  	jiafa.onclick = function(){
+	  		num4.value=parseFloat(num1.value)+ parseFloat(num2.value);
+	  	}
+	  	jianfa.onclick = function(){
+	  		num4.value=parseFloat(num1.value)-parseFloat(num2.value);
+	  	}
+	  	chengfa.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num2.value);
+	  	}
+	  	chufa.onclick = function(){
+	  		num4.value=parseFloat(num1.value)/parseFloat(num2.value);
+	  	}
+	  	pi.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*3.14;
+	  	}
+	  	zfxzc.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*4;
+	  	}
+	  	zfxmj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num1.value);
+	  	}
+	  	cfxzc.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*2+parseFloat(num2.value)*2;
+	  	}
+	  	cfxmj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num2.value);
+	  	}
+	  	sjxzc.onclick = function(){
+	  		num4.value=parseFloat(num1.value)+parseFloat(num2.value)+parseFloat(num3.value);
+	  	}
+	  	sjxmj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num2.value)/2;
+	  	}
+	  	txmj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num3.value)+parseFloat(num2.value)*parseFloat(num3.value)/2;
+	  	}
+	  	yzc.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*2*3.14;
+	  	}
+	  	ymj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num1.value)*3.14;
+	  	}
+	  	lftbmj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num1.value)*6;
+	  	}
+	  	lfttj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num2.value)*parseFloat(num3.value);
+	  	}
+	  	cftbmj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num2.value)+parseFloat(num1.value)*parseFloat(num3.value)+parseFloat(num2.value)*parseFloat(num3.value);
+	  	}
+	  	cfttj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num2.value)*parseFloat(num3.value);
+	  	}
+	  	yzbmj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num1.value)*3.14*2+2*3.14*parseFloat(num1.value)*parseFloat(num2.value);
+	  	}
+	  	yztj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num1.value)*parseFloat(num2.value)*3.14;
+	  	}
+	  	yztj2.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num1.value)*3.14*parseFloat(num2.value)/3;
+	  	}
+	  	yqtj.onclick = function(){
+	  		num4.value=parseFloat(num1.value)*parseFloat(num1.value)*parseFloat(num1.value)*0.75*3.14;
+	  	}
+	  	mi.onclick = function(){
+	  		num4.value=Math.pow(parseFloat(num1.value),parseFloat(num2.value));
+	  	}
+	  	kpfg.onclick= function(){
+	  		num4.value=Math.sqrt(parseFloat(num1.value));
+	  	}
+	  </script>
+	  <hr />
+	  <div class="主体" style="text-align:center;"> 
+		<font size="2">Tribute to the hobby that drives us forward<br /><b>By Leaf Studio</b></font>
+	</div>
+</body>
+</html>
